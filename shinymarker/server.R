@@ -125,8 +125,9 @@ shinyServer(function(input, output) {
                                         #                            acrd <- unlist(x$alleles[c(unlist(list(c(4,5),c(1,6),c(2),c(3))[[j]]))])
                                         #                            abline(v=acrd,col=j+1,lwd=2)
                                         #                        }
+                            if (j<4) col=j+1 else col='darksalmon'
                             points(peak~size,type="l",col="white",lwd=2,dat=x$data[x$data$chan==j,])
-                            points(peak~size,type="l",col=j+1,dat=x$data[x$data$chan==j,])
+                            points(peak~size,type="l",col=col,dat=x$data[x$data$chan==j,])
                         }
                     
                     if (input$standard) {points(peak~size, type="l",
