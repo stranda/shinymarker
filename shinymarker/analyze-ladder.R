@@ -3,11 +3,11 @@
 analyze.standard <- function(fsadat,
                              actual.peaks=c(35, 50, 75, 100, 139, 150, 160, 200, 250, 300, 340, 350, 400, 450, 490, 500),
                              min.signal=500,
-                             xlim=c(1200,7000),  # range of times
+                             xlim=c(1200,9000),  # range of times
                              order=3
                              )
     {
-        if (FALSE) { actual.peaks=c(35, 50, 75, 100, 139, 150, 160, 200, 250, 300, 340, 350, 400, 450, 490, 500);min.signal=500;  xlim=c(1200,7000)}
+        if (FALSE) { actual.peaks=c(35, 50, 75, 100, 139, 150, 160, 200, 250, 300, 340, 350, 400, 450, 490, 500);min.signal=500;  xlim=c(1200,9000)}
         tmp <- fsadat
         ## first clip the sequence times to the raw xlimits
         tmp <- tmp[(tmp$time>=xlim[1])&(tmp$time<=xlim[2]),]

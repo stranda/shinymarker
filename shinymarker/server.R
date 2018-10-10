@@ -23,7 +23,7 @@ shinyServer(function(input, output) {
                               {
                                   tmp <- analyze.standard(read.fsa(files=fn,path=paste0(basepath,input$project,"/"),
                                                                    sig.channel=1:4),
-                                                          xlim=c(input$min.time,7000),
+                                                          xlim=c(input$min.time,9000),
                                                           min.signal=input$min.signal,
                                                           order=input$order)
                                   ret <- list(model= tmp$model,
